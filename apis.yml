@@ -9,6 +9,10 @@ apis:
     properties:
       - url: https://spaceapi.io
         type: Documentation
+      - url: https://spaceapi.io/how-to-use/
+        type: Getting Started
+      - url: https://api.spaceapi.io/openapi.json
+        type: OpenAPI
     description: >-
       A standardized JSON file that can be used to expose information about
       hackerspaces, makerspaces, fablabs, chaostreffs and the like across the
@@ -25,7 +29,7 @@ type: Contract
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 created: '2024-11-07T00:00:00.000Z'
-modified: '2025-01-03'
+modified: '2026-03-16'
 position: Consuming
 description: >-
   SpaceAPI is a standardized interface for public and private space providers to
@@ -39,5 +43,5 @@ description: >-
   efficiently share resources and attract a wider range of users.
 maintainers:
   - FN: Kin Lane
-    email: info@apievangelist.com
+    email: kin@apievangelist.com
 specificationVersion: '0.19'
