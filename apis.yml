@@ -1,5 +1,6 @@
 aid: spaceapi
-url: https://raw.githubusercontent.com/api-search/spaceapi/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-search/spaceapi/refs/heads/main/apis.yml
 apis:
   - aid: spaceapi:spaceapi
     name: SpaceAPI
@@ -32,15 +33,12 @@ created: '2024-11-07T00:00:00.000Z'
 modified: '2026-03-16'
 position: Consuming
 description: >-
-  SpaceAPI is a standardized interface for public and private space providers to
-  share information about their spaces in a machine-readable format. It allows
-  users to access real-time data about the availability, capacity, and amenities
-  of various spaces, such as co-working spaces, maker spaces, and event venues.
-  By providing this information in a uniform and easily accessible way, SpaceAPI
-  helps individuals and organizations find and utilize spaces that meet their
-  specific needs and requirements. Additionally, SpaceAPI promotes transparency
-  and collaboration within the space-sharing community, enabling spaces to
-  efficiently share resources and attract a wider range of users.
+  SpaceAPI is a standardized interface for public and private space providers to share
+  information about their spaces in a machine-readable format. It allows users to
+  access real-time data about the availability, capacity, and amenities of various
+  spaces, such as co-working spaces, maker spaces, and event venues. By providing
+  this information in a uniform and easily accessible way, SpaceAPI helps individuals
+  and organizations find and utilize spaces that meet their specific needs and requirements.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
