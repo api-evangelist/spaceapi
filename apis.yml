@@ -1,11 +1,9 @@
 aid: spaceapi
-url: 
-  https://raw.githubusercontent.com/api-search/spaceapi/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-search/spaceapi/refs/heads/main/apis.yml
 apis:
   - aid: spaceapi:spaceapi
     name: SpaceAPI
-    tags:
-      - API
+    tags: []
     humanURL: https://spaceapi.io
     properties:
       - url: https://spaceapi.io
@@ -22,10 +20,10 @@ apis:
       both version 0.13 and 14): A full documentation of all fields ...
 name: SpaceAPI
 tags:
-  - Spaces
   - Co-Working
   - Event Spaces
   - Maker Spaces
+  - Spaces
 type: Contract
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
