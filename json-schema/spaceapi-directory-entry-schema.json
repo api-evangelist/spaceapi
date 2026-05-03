@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/spaceapi/refs/heads/main/json-schema/spaceapi-directory-entry-schema.json",
+  "title": "SpaceAPI Directory Entry",
+  "description": "Schema for a SpaceAPI directory entry representing a registered hackerspace or makerspace",
+  "type": "object",
+  "properties": {
+    "items": {
+      "description": "List of all registered spaces in the SpaceAPI directory",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/SpaceEntry"
+      }
+    }
+  },
+  "definitions": {
+    "SpaceEntry": {
+      "title": "Space Entry",
+      "description": "A single space registered in the SpaceAPI directory",
+      "type": "object",
+      "required": ["url", "valid"],
+      "properties": {
+        "url": {
+          "description": "URL to the space's SpaceAPI JSON endpoint",
+          "type": "string",
+          "format": "uri",
+          "example": "https://hackerspace.example.org/spaceapi.json"
+        },
+        "valid": {
+          "description": "Indicates whether the space endpoint provides a valid SpaceAPI JSON file",
+          "type": "boolean",
+          "example": true
+        },
+        "space": {
+          "description": "The name of the hackerspace or makerspace",
+          "type": "string",
+          "example": "Example Hackerspace"
+        },
+        "lastSeen": {
+          "description": "Unix timestamp of the last time the endpoint was reachable and returned valid JSON",
+          "type": "number",
+          "example": 1714652400
+        },
+        "errMsg": {
+          "description": "Error message if an issue was found with the specific endpoint",
+          "type": "string",
+          "example": "Connection timeout"
+        },
+        "data": {
+          "description": "Raw JSON payload from the last successful scraping of the space's SpaceAPI endpoint",
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    }
+  }
+}

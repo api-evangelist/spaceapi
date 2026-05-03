@@ -1,0 +1,44 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "spaceapi": "https://spaceapi.io/vocab/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "DirectoryEntry": "spaceapi:DirectoryEntry",
+    "SpaceEntry": "spaceapi:SpaceEntry",
+
+    "items": {
+      "@id": "spaceapi:items",
+      "@type": "@id"
+    },
+    "url": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "valid": {
+      "@id": "spaceapi:valid",
+      "@type": "xsd:boolean"
+    },
+    "space": {
+      "@id": "schema:name"
+    },
+    "lastSeen": {
+      "@id": "spaceapi:lastSeen",
+      "@type": "xsd:integer"
+    },
+    "errMsg": {
+      "@id": "spaceapi:errorMessage"
+    },
+    "data": {
+      "@id": "spaceapi:rawData"
+    },
+
+    "Hackerspace": "schema:LodgingBusiness",
+    "Makerspace": "schema:LodgingBusiness",
+    "location": "schema:location",
+    "address": "schema:address",
+    "openingHours": "schema:openingHours",
+    "contact": "schema:contactPoint"
+  }
+}

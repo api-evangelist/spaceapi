@@ -1,0 +1,55 @@
+naftiko: "1.0.0-alpha1"
+
+info:
+  label: SpaceAPI Space Discovery
+  description: >-
+    Workflow capability for discovering and browsing hackerspaces, makerspaces, fablabs,
+    and community spaces worldwide using the SpaceAPI directory. Useful for applications
+    that want to help users find nearby spaces or display real-time space status.
+  tags:
+    - Co-Working
+    - Maker Spaces
+    - Hackerspaces
+    - Directory
+    - Community
+  created: "2026-05-02"
+  modified: "2026-05-02"
+
+capability:
+  consumes:
+    - import: spaceapi-collector
+      location: ./shared/spaceapi-collector.yaml
+
+  exposes:
+    - type: rest
+      port: 8080
+      namespace: space-discovery-api
+      description: Unified REST API for discovering community spaces via SpaceAPI.
+      resources:
+        - path: /v1/spaces
+          name: spaces
+          description: All registered SpaceAPI spaces in the global directory
+          operations:
+            - method: GET
+              name: list-spaces
+              description: List all registered hackerspaces, makerspaces, and fablabs
+              call: "spaceapi-collector.list-spaces"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+    - type: mcp
+      port: 9090
+      namespace: space-discovery-mcp
+      transport: http
+      description: MCP server for AI-assisted discovery of global community spaces.
+      tools:
+        - name: list-spaces
+          description: List all hackerspaces, makerspaces, and fablabs registered in the SpaceAPI directory
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "spaceapi-collector.list-spaces"
+          outputParameters:
+            - type: object
+              mapping: "$."

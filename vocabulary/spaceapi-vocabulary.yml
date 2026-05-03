@@ -1,0 +1,98 @@
+vocabulary:
+  title: SpaceAPI Vocabulary
+  description: >-
+    Domain vocabulary for the SpaceAPI standard — an open specification for
+    hackerspaces, makerspaces, fablabs, and community spaces to share real-time
+    information about their spaces in a machine-readable format.
+  version: "1.0.0"
+  created: "2026-05-02"
+  modified: "2026-05-02"
+
+terms:
+  - term: SpaceAPI
+    definition: >-
+      An open standard and JSON schema that allows hackerspaces, makerspaces, fablabs,
+      and similar community spaces to publish real-time status information about their
+      spaces in a machine-readable format.
+    tags:
+      - Standard
+      - Open Source
+
+  - term: Hackerspace
+    definition: >-
+      A community-operated workspace where people share resources and knowledge to
+      work on technology, science, digital art, or electronic art projects. Also
+      known as a hacklab or makerspace.
+    tags:
+      - Community
+      - Facility
+
+  - term: Makerspace
+    definition: >-
+      A collaborative workspace with shared tools, equipment, and resources for
+      making, prototyping, and creative projects. Closely related to hackerspaces.
+    tags:
+      - Community
+      - Facility
+
+  - term: Fablab
+    definition: >-
+      A fabrication laboratory (fablab) is a small-scale workshop offering digital
+      fabrication equipment such as laser cutters, CNC mills, and 3D printers.
+    tags:
+      - Community
+      - Facility
+
+  - term: Collector
+    definition: >-
+      The SpaceAPI Collector is the central service that periodically scrapes all
+      registered space endpoints, validates their SpaceAPI JSON, and aggregates them
+      into a searchable directory.
+    tags:
+      - Service
+      - Directory
+
+  - term: Directory
+    definition: >-
+      The SpaceAPI directory is the aggregated list of all spaces that have registered
+      their endpoint with the collector. It is served at directory.spaceapi.io.
+    tags:
+      - Service
+      - Registry
+
+  - term: SpaceEntry
+    definition: >-
+      A single record in the SpaceAPI directory representing one registered space,
+      including its endpoint URL, validity status, space name, and last-seen timestamp.
+    tags:
+      - Data Model
+
+  - term: valid
+    definition: >-
+      A boolean flag indicating whether a space's endpoint returned a JSON file that
+      conforms to the SpaceAPI schema at last check.
+    tags:
+      - Status
+
+  - term: lastSeen
+    definition: >-
+      A Unix timestamp recording the last time the collector was able to reach a
+      space's SpaceAPI endpoint and receive valid JSON in response.
+    tags:
+      - Metadata
+
+  - term: Open Status
+    definition: >-
+      A real-time indicator published by a space in its SpaceAPI endpoint indicating
+      whether the physical space is currently open to visitors.
+    tags:
+      - Status
+      - Real-Time
+
+  - term: api_compatibility
+    definition: >-
+      A field in a space's SpaceAPI JSON that indicates which version(s) of the
+      SpaceAPI schema the endpoint is compatible with (e.g., "14" for version 0.14).
+    tags:
+      - Schema
+      - Versioning

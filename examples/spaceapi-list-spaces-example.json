@@ -1,0 +1,52 @@
+{
+  "summary": "List All Spaces Example",
+  "description": "Example response from GET / on the SpaceAPI Collector showing registered hackerspaces and makerspaces",
+  "request": {
+    "method": "GET",
+    "url": "https://collector.spaceapi.io/",
+    "headers": {
+      "Accept": "application/json"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "items": [
+        {
+          "url": "https://hackerspace.example.org/spaceapi.json",
+          "valid": true,
+          "space": "Example Hackerspace",
+          "lastSeen": 1714652400,
+          "data": {
+            "api_compatibility": ["14"],
+            "space": "Example Hackerspace",
+            "logo": "https://hackerspace.example.org/logo.png",
+            "url": "https://hackerspace.example.org",
+            "location": {
+              "address": "123 Main St, Berlin, Germany",
+              "lat": 52.5200,
+              "lon": 13.4050
+            },
+            "state": {
+              "open": true
+            },
+            "contact": {
+              "email": "info@hackerspace.example.org",
+              "irc": "irc://irc.freenode.net/#example"
+            }
+          }
+        },
+        {
+          "url": "https://makerspace.example.com/status.json",
+          "valid": false,
+          "space": "Example Makerspace",
+          "lastSeen": 1714500000,
+          "errMsg": "Connection timeout"
+        }
+      ]
+    }
+  }
+}

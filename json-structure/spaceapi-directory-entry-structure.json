@@ -1,0 +1,55 @@
+{
+  "title": "SpaceAPI Directory Entry Structure",
+  "description": "JSON structure documentation for the SpaceAPI Collector directory response",
+  "type": "object",
+  "fields": [
+    {
+      "name": "items",
+      "type": "array",
+      "description": "List of all registered spaces in the SpaceAPI directory",
+      "items": {
+        "type": "object",
+        "fields": [
+          {
+            "name": "url",
+            "type": "string",
+            "format": "uri",
+            "required": true,
+            "description": "URL to the space's SpaceAPI JSON endpoint"
+          },
+          {
+            "name": "valid",
+            "type": "boolean",
+            "required": true,
+            "description": "Whether the space's endpoint provides a valid SpaceAPI JSON file"
+          },
+          {
+            "name": "space",
+            "type": "string",
+            "required": false,
+            "description": "The display name of the hackerspace or makerspace"
+          },
+          {
+            "name": "lastSeen",
+            "type": "number",
+            "format": "unix-timestamp",
+            "required": false,
+            "description": "Unix timestamp of last successful reachability check"
+          },
+          {
+            "name": "errMsg",
+            "type": "string",
+            "required": false,
+            "description": "Error message if an issue was found with the endpoint"
+          },
+          {
+            "name": "data",
+            "type": "object",
+            "required": false,
+            "description": "Raw JSON payload from last successful scrape of the space's endpoint"
+          }
+        ]
+      }
+    }
+  ]
+}

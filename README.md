@@ -1,42 +1,52 @@
-# SpaceAPI (spaceapi)
-SpaceAPI is a standardized interface for public and private space providers to share information about their spaces in a machine-readable format. It allows users to access real-time data about the availability, capacity, and amenities of various spaces, such as co-working spaces, maker spaces, and event venues. By providing this information in a uniform and easily accessible way, SpaceAPI helps individuals and organizations find and utilize spaces that meet their specific needs and requirements. Additionally, SpaceAPI promotes transparency and collaboration within the space-sharing community, enabling spaces to efficiently share resources and attract a wider range of users.
+# SpaceAPI
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-search/spaceapi/refs/heads/main/apis.yml)
+SpaceAPI is an open standard for hackerspaces, makerspaces, fablabs, and similar community spaces to publish real-time information about their spaces in a machine-readable JSON format. It provides a central directory (collector) that aggregates endpoints from participating spaces around the world, enabling applications to discover and display space status, location, contact, and operational information.
 
-## Scope
+## Artifacts
 
-- **Type:** Contract 
-- **Position:** Consuming 
-- **Access:** 3rd-Party 
+### OpenAPI Specs
 
-## Tags:
+- [SpaceAPI Collector OpenAPI](openapi/spaceapi-collector-openapi.yml)
 
- - Spaces, Co-Working, Event Spaces, Maker Spaces
+### Spectral Rules
 
-## Timestamps
+- [SpaceAPI Rules](rules/spaceapi-rules.yml)
 
-- **Created:** 2024-11-07 
-- **Modified:** 2025-01-03 
+### Capabilities
 
-## APIs
+- [Space Discovery](capabilities/space-discovery.yaml) — Workflow capability for discovering community spaces worldwide
 
-### SpaceAPI
-A standardized JSON file that can be used to expose information about hackerspaces, makerspaces, fablabs, chaostreffs and the like across the world to web apps or any other application. The specification uses JSON Schema. The following example shows how it looks like (compatible with both version 0.13 and 14): A full documentation of all fields ...
+**Shared Definitions**
+- [SpaceAPI Collector](capabilities/shared/spaceapi-collector.yaml)
 
-**Human URL:** [https://spaceapi.io](https://spaceapi.io)
+### JSON Schema
 
+- [Directory Entry Schema](json-schema/spaceapi-directory-entry-schema.json)
 
-#### Tags:
+### JSON Structure
 
- - API
+- [Directory Entry Structure](json-structure/spaceapi-directory-entry-structure.json)
 
-#### Properties
+### JSON-LD
 
-- [Documentation](https://spaceapi.io)
+- [SpaceAPI Context](json-ld/spaceapi-context.jsonld)
+
+### Examples
+
+- [List Spaces Example](examples/spaceapi-list-spaces-example.json)
+
+### Vocabulary
+
+- [SpaceAPI Vocabulary](vocabulary/spaceapi-vocabulary.yml)
+
+## Links
+
+- [Website](https://spaceapi.io)
+- [Documentation](https://spaceapi.io/how-to-use/)
+- [Directory](https://directory.spaceapi.io/)
+- [GitHub](https://github.com/SpaceApi)
 
 ## Maintainers
 
-**FN:** Kin Lane
-
-**Email:** info@apievangelist.com
-
+**FN:** Kin Lane  
+**Email:** kin@apievangelist.com

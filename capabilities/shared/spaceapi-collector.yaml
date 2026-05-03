@@ -1,0 +1,67 @@
+naftiko: "1.0.0-alpha1"
+
+info:
+  label: SpaceAPI Collector
+  description: >-
+    The SpaceAPI Collector provides a central directory of all hackerspaces, makerspaces,
+    and fablabs around the world that implement the SpaceAPI standard. It returns the
+    full list of registered spaces with their endpoint URLs and validity status.
+  tags:
+    - Co-Working
+    - Maker Spaces
+    - Hackerspaces
+    - Directory
+  created: "2026-05-02"
+  modified: "2026-05-02"
+
+capability:
+  consumes:
+    - type: http
+      namespace: spaceapi-collector
+      baseUri: https://collector.spaceapi.io
+      description: SpaceAPI Collector directory API
+      resources:
+        - name: directory
+          path: /
+          description: Full directory of all registered SpaceAPI spaces
+          operations:
+            - name: list-spaces
+              method: GET
+              description: Returns the full list of registered hackerspaces and makerspaces
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+
+  exposes:
+    - type: rest
+      port: 8100
+      namespace: spaceapi-collector-rest
+      resources:
+        - path: /v1/spaces
+          name: spaces
+          description: List of all registered SpaceAPI spaces
+          operations:
+            - method: GET
+              name: list-spaces
+              description: Returns all registered spaces in the SpaceAPI directory
+              call: "spaceapi-collector.list-spaces"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+    - type: mcp
+      port: 9100
+      namespace: spaceapi-collector-mcp
+      transport: http
+      tools:
+        - name: list-spaces
+          description: Retrieve the full SpaceAPI directory of registered hackerspaces and makerspaces
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "spaceapi-collector.list-spaces"
+          outputParameters:
+            - type: object
+              mapping: "$."
