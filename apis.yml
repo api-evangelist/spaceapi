@@ -38,7 +38,7 @@ apis:
       - url: https://spaceapi.io
         type: Documentation
       - url: https://spaceapi.io/how-to-use/
-        type: Getting Started
+        type: GettingStarted
       - url: https://api.spaceapi.io/openapi.json
         type: OpenAPI
       - url: https://raw.githubusercontent.com/api-evangelist/spaceapi/refs/heads/main/openapi/spaceapi-collector-openapi.yml
