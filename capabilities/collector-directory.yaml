@@ -1,0 +1,67 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: SpaceAPI Collector — Directory
+  description: 'SpaceAPI Collector — Directory. 1 operations. Lead operation: List All Spaces. Self-contained Naftiko capability
+    covering one Spaceapi business surface.'
+  tags:
+  - Spaceapi
+  - Directory
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    SPACEAPI_API_KEY: SPACEAPI_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: collector-directory
+    baseUri: https://collector.spaceapi.io
+    description: SpaceAPI Collector — Directory business capability. Self-contained, no shared references.
+    resources:
+    - name: root
+      path: /
+      operations:
+      - name: listspaces
+        method: GET
+        description: List All Spaces
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    namespace: collector-directory-rest
+    port: 8080
+    description: REST adapter for SpaceAPI Collector — Directory. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1
+      name: root
+      description: REST surface for root.
+      operations:
+      - method: GET
+        name: listspaces
+        description: List All Spaces
+        call: collector-directory.listspaces
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: collector-directory-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for SpaceAPI Collector — Directory. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: list-all-spaces
+      description: List All Spaces
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: collector-directory.listspaces
+      outputParameters:
+      - type: object
+        mapping: $.
