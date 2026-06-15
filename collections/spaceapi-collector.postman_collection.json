@@ -1,0 +1,131 @@
+{
+  "item": [
+    {
+      "id": "e326d220-1f1b-4866-81dd-9f742e932244",
+      "name": "Directory",
+      "description": {
+        "content": "SpaceAPI directory listing operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7ea4172b-d8f8-4897-b08d-a3a2165896a7",
+          "name": "List All Spaces",
+          "request": {
+            "name": "List All Spaces",
+            "description": {
+              "content": "Returns the full SpaceAPI directory — a list of all registered hackerspaces, makerspaces, and fablabs that implement the SpaceAPI standard. Each entry includes the space endpoint URL, validity status, space name, last-seen timestamp, and any error messages for unreachable endpoints.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "deb2985d-bb74-4283-86ea-1bc15744fd58",
+              "name": "Successful operation — returns the full directory of registered spaces",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"items\": [\n    {\n      \"url\": \"https://hackerspace.example.org/spaceapi.json\",\n      \"valid\": true,\n      \"space\": \"Example Hackerspace\",\n      \"lastSeen\": 1714652400\n    },\n    {\n      \"url\": \"https://makerspace.example.com/status.json\",\n      \"valid\": false,\n      \"space\": \"Example Makerspace\",\n      \"lastSeen\": 1714500000,\n      \"errMsg\": \"Connection timeout\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a1e18c6a-27b3-4410-bcc8-d72c91095c49",
+              "name": "Internal server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://collector.spaceapi.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "6bf5776d-b8d0-489e-ba2c-342fb94fc7a5",
+    "name": "SpaceAPI Collector",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The SpaceAPI Collector is a central directory API that aggregates endpoints from hackerspaces, makerspaces, fablabs, and similar community spaces around the world that implement the SpaceAPI standard. It returns a list of all registered spaces with their status endpoint URLs, validity status, names, and last-seen timestamps.\n\nContact Support:\n Email: spaceapi-team@chaospott.de",
+      "type": "text/plain"
+    }
+  }
+}

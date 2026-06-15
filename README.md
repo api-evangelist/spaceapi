@@ -1,52 +1,65 @@
-# SpaceAPI
+# SpaceAPI (spaceapi)
 
 SpaceAPI is an open standard for hackerspaces, makerspaces, fablabs, and similar community spaces to publish real-time information about their spaces in a machine-readable JSON format. It provides a central directory (collector) that aggregates endpoints from participating spaces around the world, enabling applications to discover and display space status, location, contact, and operational information.
 
-## Artifacts
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/spaceapi/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/spaceapi/refs/heads/main/apis.yml)
 
-### OpenAPI Specs
+## Scope
 
-- [SpaceAPI Collector OpenAPI](openapi/spaceapi-collector-openapi.yml)
+- **Type:** Index
 
-### Spectral Rules
+## Tags
 
-- [SpaceAPI Rules](rules/spaceapi-rules.yml)
+- Co-Working
+- Event Spaces
+- Maker Spaces
+- Hackerspaces
+- Community
+- Open Standard
 
-### Capabilities
+## Timestamps
 
-- [Space Discovery](capabilities/space-discovery.yaml) — Workflow capability for discovering community spaces worldwide
+- **Created:** 2024-11-07
+- **Modified:** 2026-05-19
 
-**Shared Definitions**
-- [SpaceAPI Collector](capabilities/shared/spaceapi-collector.yaml)
+## APIs
 
-### JSON Schema
+### SpaceAPI Collector
 
-- [Directory Entry Schema](json-schema/spaceapi-directory-entry-schema.json)
+The SpaceAPI Collector is a central directory API that aggregates endpoints from hackerspaces and makerspaces around the world that implement the SpaceAPI standard. It returns a list of all registered spaces with their status endpoint URLs, validity, names, and last-seen timestamps.
 
-### JSON Structure
+- **Human URL:** [https://spaceapi.io](https://spaceapi.io)
+- **Base URL:** `https://collector.spaceapi.io`
 
-- [Directory Entry Structure](json-structure/spaceapi-directory-entry-structure.json)
+#### Tags
 
-### JSON-LD
+- Co-Working
+- Maker Spaces
+- Hackerspaces
+- Directory
 
-- [SpaceAPI Context](json-ld/spaceapi-context.jsonld)
+#### Properties
 
-### Examples
+- [Documentation](https://spaceapi.io)
+- [Getting Started](https://spaceapi.io/how-to-use/)
+- [OpenAPI](https://api.spaceapi.io/openapi.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/spaceapi/refs/heads/main/openapi/spaceapi-collector-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Spectral Rules](https://raw.githubusercontent.com/api-evangelist/spaceapi/refs/heads/main/rules/spaceapi-rules.yml)
+- [JSON Schema](https://raw.githubusercontent.com/api-evangelist/spaceapi/refs/heads/main/json-schema/spaceapi-directory-entry-schema.json) — [JSON Schema](https://json-schema.org/specification)
+- [JSON Structure](https://raw.githubusercontent.com/api-evangelist/spaceapi/refs/heads/main/json-structure/spaceapi-directory-entry-structure.json)
+- [J S O N L D Context](https://raw.githubusercontent.com/api-evangelist/spaceapi/refs/heads/main/json-ld/spaceapi-context.jsonld)
+- [Vocabulary](https://raw.githubusercontent.com/api-evangelist/spaceapi/refs/heads/main/vocabulary/spaceapi-vocabulary.yml)
+- [Postman Collection](collections/spaceapi-collector.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/spaceapi-collector.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
-- [List Spaces Example](examples/spaceapi-list-spaces-example.json)
-
-### Vocabulary
-
-- [SpaceAPI Vocabulary](vocabulary/spaceapi-vocabulary.yml)
-
-## Links
+## Common Properties
 
 - [Website](https://spaceapi.io)
 - [Documentation](https://spaceapi.io/how-to-use/)
+- [Git Hub](https://github.com/SpaceApi)
 - [Directory](https://directory.spaceapi.io/)
-- [GitHub](https://github.com/SpaceApi)
 
 ## Maintainers
 
-**FN:** Kin Lane  
+**FN:** Kin Lane
 **Email:** kin@apievangelist.com
