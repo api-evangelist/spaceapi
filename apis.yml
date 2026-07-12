@@ -55,6 +55,8 @@ apis:
       - url: https://raw.githubusercontent.com/api-evangelist/spaceapi/refs/heads/main/vocabulary/spaceapi-vocabulary.yml
         type: Vocabulary
 common:
+  - type: DomainSecurity
+    url: security/spaceapi-domain-security.yml
   - type: Website
     url: https://spaceapi.io
   - type: Documentation
