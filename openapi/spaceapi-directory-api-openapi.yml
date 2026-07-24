@@ -1,11 +1,7 @@
 openapi: 3.0.0
 info:
-  title: SpaceAPI Collector
-  description: >-
-    The SpaceAPI Collector is a central directory API that aggregates endpoints from
-    hackerspaces, makerspaces, fablabs, and similar community spaces around the world
-    that implement the SpaceAPI standard. It returns a list of all registered spaces
-    with their status endpoint URLs, validity status, names, and last-seen timestamps.
+  title: SpaceAPI Collector Directory API
+  description: The SpaceAPI Collector is a central directory API that aggregates endpoints from hackerspaces, makerspaces, fablabs, and similar community spaces around the world that implement the SpaceAPI standard. It returns a list of all registered spaces with their status endpoint URLs, validity status, names, and last-seen timestamps.
   version: 0.0.1
   contact:
     email: spaceapi-team@chaospott.de
@@ -13,27 +9,20 @@ info:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   termsOfService: https://spaceapi.io/daemon/terms
-externalDocs:
-  description: Find out more about SpaceAPI
-  url: https://spaceapi.io
 servers:
-  - url: https://collector.spaceapi.io
-    description: SpaceAPI Collector production server
+- url: https://collector.spaceapi.io
+  description: SpaceAPI Collector production server
 tags:
-  - name: Directory
-    description: SpaceAPI directory listing operations
+- name: Directory
+  description: SpaceAPI directory listing operations
 paths:
   /:
     get:
       operationId: listSpaces
       summary: List All Spaces
-      description: >-
-        Returns the full SpaceAPI directory — a list of all registered hackerspaces,
-        makerspaces, and fablabs that implement the SpaceAPI standard. Each entry
-        includes the space endpoint URL, validity status, space name, last-seen timestamp,
-        and any error messages for unreachable endpoints.
+      description: Returns the full SpaceAPI directory — a list of all registered hackerspaces, makerspaces, and fablabs that implement the SpaceAPI standard. Each entry includes the space endpoint URL, validity status, space name, last-seen timestamp, and any error messages for unreachable endpoints.
       tags:
-        - Directory
+      - Directory
       responses:
         '200':
           description: Successful operation — returns the full directory of registered spaces
@@ -43,15 +32,15 @@ paths:
                 $ref: '#/components/schemas/DirectoryEntry'
               example:
                 items:
-                  - url: https://hackerspace.example.org/spaceapi.json
-                    valid: true
-                    space: Example Hackerspace
-                    lastSeen: 1714652400
-                  - url: https://makerspace.example.com/status.json
-                    valid: false
-                    space: Example Makerspace
-                    lastSeen: 1714500000
-                    errMsg: Connection timeout
+                - url: https://hackerspace.example.org/spaceapi.json
+                  valid: true
+                  space: Example Hackerspace
+                  lastSeen: 1714652400
+                - url: https://makerspace.example.com/status.json
+                  valid: false
+                  space: Example Makerspace
+                  lastSeen: 1714500000
+                  errMsg: Connection timeout
         '500':
           description: Internal server error
 components:
@@ -69,8 +58,8 @@ components:
       description: A single space registered in the SpaceAPI directory
       type: object
       required:
-        - url
-        - valid
+      - url
+      - valid
       properties:
         url:
           description: URL to the space's SpaceAPI JSON endpoint
@@ -86,9 +75,7 @@ components:
           type: string
           example: Example Hackerspace
         lastSeen:
-          description: >-
-            Unix timestamp of the last time the endpoint was reachable and provided
-            valid JSON (does not require it to have been valid SpaceAPI)
+          description: Unix timestamp of the last time the endpoint was reachable and provided valid JSON (does not require it to have been valid SpaceAPI)
           type: number
           format: int64
           example: 1714652400
@@ -99,3 +86,6 @@ components:
         data:
           description: Raw JSON from the last successful scraping of the space's endpoint
           type: object
+externalDocs:
+  description: Find out more about SpaceAPI
+  url: https://spaceapi.io
