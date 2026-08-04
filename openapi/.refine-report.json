@@ -1,0 +1,14 @@
+{
+  "provider": "spaceapi",
+  "sources": [
+    "spaceapi-directory-api-openapi.yml"
+  ],
+  "outputs": [
+    "spaceapi-directory-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
