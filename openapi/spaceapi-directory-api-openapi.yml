@@ -1,4 +1,4 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
   title: SpaceAPI Collector Directory API
   description: The SpaceAPI Collector is a central directory API that aggregates endpoints from hackerspaces, makerspaces, fablabs, and similar community spaces around the world that implement the SpaceAPI standard. It returns a list of all registered spaces with their status endpoint URLs, validity status, names, and last-seen timestamps.
@@ -45,15 +45,6 @@ paths:
           description: Internal server error
 components:
   schemas:
-    DirectoryEntry:
-      description: Internal SpaceAPI Directory entry containing all registered spaces
-      type: object
-      properties:
-        items:
-          description: List of directory entries for all registered spaces
-          type: array
-          items:
-            $ref: '#/components/schemas/SpaceEntry'
     SpaceEntry:
       description: A single space registered in the SpaceAPI directory
       type: object
@@ -86,6 +77,15 @@ components:
         data:
           description: Raw JSON from the last successful scraping of the space's endpoint
           type: object
+    DirectoryEntry:
+      description: Internal SpaceAPI Directory entry containing all registered spaces
+      type: object
+      properties:
+        items:
+          description: List of directory entries for all registered spaces
+          type: array
+          items:
+            $ref: '#/components/schemas/SpaceEntry'
 externalDocs:
   description: Find out more about SpaceAPI
   url: https://spaceapi.io
