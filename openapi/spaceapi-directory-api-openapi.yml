@@ -45,6 +45,15 @@ paths:
           description: Internal server error
 components:
   schemas:
+    DirectoryEntry:
+      description: Internal SpaceAPI Directory entry containing all registered spaces
+      type: object
+      properties:
+        items:
+          description: List of directory entries for all registered spaces
+          type: array
+          items:
+            $ref: '#/components/schemas/SpaceEntry'
     SpaceEntry:
       description: A single space registered in the SpaceAPI directory
       type: object
@@ -77,15 +86,6 @@ components:
         data:
           description: Raw JSON from the last successful scraping of the space's endpoint
           type: object
-    DirectoryEntry:
-      description: Internal SpaceAPI Directory entry containing all registered spaces
-      type: object
-      properties:
-        items:
-          description: List of directory entries for all registered spaces
-          type: array
-          items:
-            $ref: '#/components/schemas/SpaceEntry'
 externalDocs:
   description: Find out more about SpaceAPI
   url: https://spaceapi.io
