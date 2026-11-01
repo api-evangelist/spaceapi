@@ -1,4 +1,4 @@
-# SpaceAPI (spaceapi)
+# SpaceAPI
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,64 +66,150 @@
 
 SpaceAPI is an open standard for hackerspaces, makerspaces, fablabs, and similar community spaces to publish real-time information about their spaces in a machine-readable JSON format. It provides a central directory (collector) that aggregates endpoints from participating spaces around the world, enabling applications to discover and display space status, location, contact, and operational information.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/spaceapi/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/spaceapi/refs/heads/main/apis.yml)
+**Areas:** Co-Working · Event Spaces · Maker Spaces · Hackerspaces · Community · Open Standard
 
-## Scope
+## SpaceAPI on APIs.io
 
-- **Type:** Index
+Everything profiled for SpaceAPI is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/spaceapi/](https://apis.io/providers/spaceapi/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (1)
 
-- Co-Working
-- Event Spaces
-- Maker Spaces
-- Hackerspaces
-- Community
-- Open Standard
+- [SpaceAPI Directory API](https://apis.io/apis/spaceapi/spaceapi-directory-api/) — SpaceAPI directory listing operations
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-11-07
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### SpaceAPI Collector
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The SpaceAPI Collector is a central directory API that aggregates endpoints from hackerspaces and makerspaces around the world that implement the SpaceAPI standard. It returns a list of all registered spaces with their status endpoint URLs, validity, names, and last-seen timestamps.
+- [Spaceapi Agentic Access](https://apis.io/agentic-access/spaceapi/spaceapi-agentic-access/)
 
-- **Human URL:** [https://spaceapi.io](https://spaceapi.io)
-- **Base URL:** `https://collector.spaceapi.io`
+#### JSON Schema (1)
 
-#### Tags
+The data models the API reads and writes.
 
-- Co-Working
-- Maker Spaces
-- Hackerspaces
-- Directory
+- [SpaceAPI Directory Entry](https://apis.io/schemas/spaceapi/spaceapi-directory-entry/)
 
-#### Properties
+#### JSON Structure (1)
 
-- [Documentation](https://spaceapi.io)
-- [Getting Started](https://spaceapi.io/how-to-use/)
-- [OpenAPI](https://api.spaceapi.io/openapi.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/spaceapi/refs/heads/main/openapi/spaceapi-collector-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Spectral Rules](https://raw.githubusercontent.com/api-evangelist/spaceapi/refs/heads/main/rules/spaceapi-rules.yml)
-- [JSON Schema](https://raw.githubusercontent.com/api-evangelist/spaceapi/refs/heads/main/json-schema/spaceapi-directory-entry-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Structure](https://raw.githubusercontent.com/api-evangelist/spaceapi/refs/heads/main/json-structure/spaceapi-directory-entry-structure.json)
-- [J S O N L D Context](https://raw.githubusercontent.com/api-evangelist/spaceapi/refs/heads/main/json-ld/spaceapi-context.jsonld)
-- [Vocabulary](https://raw.githubusercontent.com/api-evangelist/spaceapi/refs/heads/main/vocabulary/spaceapi-vocabulary.yml)
-- [Postman Collection](collections/spaceapi-collector.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/spaceapi-collector.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Data models expressed in JSON Structure.
 
-## Common Properties
+- [Spaceapi Directory Entry Structure](https://apis.io/json-structure/spaceapi/spaceapi-directory-entry-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Spaceapi Context](https://apis.io/jsonld/spaceapi/spaceapi-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [SpaceAPI Vocabulary](https://apis.io/vocabularies/spaceapi/spaceapi-vocabulary/)
+
+#### Examples (1)
+
+Example requests and responses.
+
+- [Spaceapi List Spaces Example](https://apis.io/examples/spaceapi/spaceapi-list-spaces-example/)
+
+#### Collections (2)
+
+Postman and Open Collection request collections.
+
+- [SpaceAPI Collector](https://apis.io/collections/spaceapi/open-spaceapi-collector/)
+- [SpaceAPI Collector Directory API](https://apis.io/collections/spaceapi/open-spaceapi-directory-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [SpaceAPI — jsonschema rules](https://apis.io/rules/spaceapi/spaceapi-jsonschema-spectral-rules/)
+- [SpaceAPI API Rules](https://apis.io/rules/spaceapi/spaceapi-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Spaceapi Domain Security](https://apis.io/security/spaceapi/spaceapi-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Spaceapi Plans Pricing](https://apis.io/plans/spaceapi/spaceapi-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Spaceapi Rate Limits](https://apis.io/rate-limits/spaceapi/spaceapi-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Spaceapi Finops](https://apis.io/finops/spaceapi/spaceapi-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://spaceapi.io)
 - [Documentation](https://spaceapi.io/how-to-use/)
-- [Git Hub](https://github.com/SpaceApi)
-- [Directory](https://directory.spaceapi.io/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 30.1** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 55.0 |
+| Contract governance | 23.5 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 7.9 |
+
+**Agent readiness 23.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/spaceapi/](https://apis.io/providers/spaceapi/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for SpaceAPI: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/spaceapi/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
